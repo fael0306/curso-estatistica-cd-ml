@@ -2,4 +2,4 @@
 
 https://www.udemy.com/course/estatistica-para-ciencia-de-dados-machine-learning/
 
-Cada seção do curso numa pasta diferente.
+Cada seção do curso numa pasta diferente (2-7).
