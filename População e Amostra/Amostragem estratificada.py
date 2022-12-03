@@ -10,19 +10,28 @@ print(dataset['income'].value_counts())
 print(7841/len(dataset)) # +
 print(24720/len(dataset)) # -
 
-# Indicando tamanho da amostra (1% dos registros)
-split = StratifiedShuffleSplit(test_size=0.01)
+def amostragemestratificada(dataset,percentual):
+    # Indicando tamanho da amostra
+    split = StratifiedShuffleSplit(test_size=percentual, random_state=1)
 
-# Separando os dados da amostra aleatoriamente na variável df_y
-for x,y in split.split(dataset, dataset['income']):
-    df_x = dataset.iloc[x]
-    df_y = dataset.iloc[y]
+    # Separando os dados da amostra aleatoriamente na variável df_y
+    for _,y in split.split(dataset, dataset['income']):
+        df_y = dataset.iloc[y]
+    return df_y
+
+df_amostragemestratificada = amostragemestratificada(dataset, 0.01)
 
 # Verificando a quantidade de registros na amostra separada (df_y)
-print(df_x.shape, df_y.shape)
+print(df_amostragemestratificada.shape)
 
 # Verificando os registros que foram separados para a amostra
-print(df_y.head())
+print(df_amostragemestratificada.head())
 
 # Verificando que a amostra é estratificada
-print(df_y['income'].value_counts())
+print(df_amostragemestratificada['income'].value_counts())
+
+# Média de idade de todas as pessoas da base
+print(dataset['age'].mean().__round__(2))
+
+# Média de idade das pessoas retiradas da amostra
+print(df_amostragemestratificada['age'].mean())

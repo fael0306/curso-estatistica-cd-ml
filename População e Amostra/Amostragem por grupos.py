@@ -3,7 +3,7 @@ import pandas as pd
 import random as rd
 import numpy as np
 
-dataset = pd.read_csv("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\População e Amostra\\covid.csv")
+dataset = pd.read_csv("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\População e Amostra\\census.csv")
 
 def amostragemporgrupos(dataset,ngrupos):
     # Gerando quantidade de pessoas por grupo
@@ -37,3 +37,9 @@ print(agrupamento.shape, agrupamento["Grupo"].value_counts())
 
 # Visualizando agrupamento selecionado
 print(agrupamento)
+
+# Média de idade de todas as pessoas da base
+print(dataset['age'].mean().__round__(2))
+
+# Média de idade das pessoas retiradas da amostra
+print(agrupamento['age'].mean().__round__(2))

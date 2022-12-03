@@ -3,7 +3,7 @@ import pandas as pd
 import random as rd
 import numpy as np
 
-dataset = pd.read_csv("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\População e Amostra\\covid.csv")
+dataset = pd.read_csv("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\População e Amostra\\census.csv")
 
 def amostragemsistematica(dados, amostras):
 
@@ -23,4 +23,12 @@ def amostragemsistematica(dados, amostras):
 
     return amostra
 
-print(amostragemsistematica(dataset,100))
+df_amostragemsistematica = amostragemsistematica(dataset,100)
+
+print(df_amostragemsistematica)
+
+# Média de idade de todas as pessoas da base
+print(dataset['age'].mean().__round__(2))
+
+# Média de idade das pessoas retiradas da amostra
+print(df_amostragemsistematica['age'].mean().__round__(2))

@@ -2,7 +2,7 @@ import pandas as pd
 import random
 import numpy as np
 
-dataset = pd.read_csv("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\População e Amostra\\covid.csv")
+dataset = pd.read_csv("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\População e Amostra\\census.csv")
 
 def amostragem_reservatorio(dataset, amostras):
     stream = []
@@ -34,3 +34,9 @@ print(df_amostragem_reservatorio.shape)
 
 # Mostrando primeiros registros selecionados na amostragem obtida
 print(df_amostragem_reservatorio.head())
+
+# Média de idade de todas as pessoas da base
+print(dataset['age'].mean().__round__(2))
+
+# Média de idade das pessoas retiradas da amostra
+print(df_amostragem_reservatorio['age'].mean().__round__(2))
