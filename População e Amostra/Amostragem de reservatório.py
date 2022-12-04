@@ -1,6 +1,5 @@
 import pandas as pd
 import random
-import numpy as np
 
 dataset = pd.read_csv("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\População e Amostra\\census.csv")
 

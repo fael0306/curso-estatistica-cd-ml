@@ -1,5 +1,5 @@
 from sklearn.model_selection import StratifiedShuffleSplit
-import pandas as pd 
+import pandas as pd
 
 dataset = pd.read_csv("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\População e Amostra\\census.csv")
 
