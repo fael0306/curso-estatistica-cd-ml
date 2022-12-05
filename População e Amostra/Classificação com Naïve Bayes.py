@@ -1,6 +1,7 @@
 import pandas as pd
 import seaborn as sns
 import numpy as np
+import matplotlib.pyplot as plt
 
 dataset = pd.read_csv("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\População e Amostra\\credit_data.csv")
 
@@ -70,10 +71,32 @@ previsoes = modelo.predict(X_teste)
 
 print(previsoes)
 print(y_teste)
-soma = 0
-for i in range(400):
-    if previsoes[i]==y_teste[i]:
-        soma = soma+1
-# Printando taxa de acerto
-print("")
-print("Taxa de acerto da previsão:",soma/len(previsoes)*100,"%")
+
+from sklearn.metrics import accuracy_score
+
+# Verificando taxa de acerto das previsões
+print("A taxa de acerto da previsão é:",accuracy_score(previsoes, y_teste)*100,"%")
+
+from sklearn.metrics import confusion_matrix
+
+# Matriz de classificações 
+# pagam empréstimo e foram classificados corretamente, pagam empréstimo e foram classificados incorretamente 
+# não pagam e foram classificados como pagantes, não pagam e foram classificados corretamente
+cm = confusion_matrix(previsoes, y_teste)
+print(cm)
+
+# Pegando os elementos da matriz
+matrizlista = cm.tolist()
+
+# Gráfico da matriz
+#sns.heatmap(cm, annot=True)
+#plt.plot(cm)
+#plt.show()
+
+# Percentual de acerto para pessoas que pagam o empréstimo: primeiro elemento da primeira linha são os acertos e a primeira linha são os que pagam, então dividimos os acertos pelo total da linha
+print("Percentual de acerto para pessoas que pagam o empréstimo:",round(matrizlista[0][0]/sum(matrizlista[0])*100,2),"%")
+
+# Percentual de acerto para pessoas que não pagam o empréstimo: segundo elemento da segunda linha são os acertos e a segunda linha são os que não pagam, então dividimos os acertos pelo total da linha
+print("Percentual de acerto para pessoas que não pagam o empréstimo:",round(matrizlista[1][1]/sum(matrizlista[1])*100,2),"%")
+
+# O acerto é bem maior para o caso que acontece mais, já que a previsão melhora com a quantidade de dados a mais
