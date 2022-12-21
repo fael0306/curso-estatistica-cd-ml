@@ -39,20 +39,25 @@ print(moda)
 # Encontrando classe da mediana
 fi2 = dataset["fi"].sum()/2
 print(fi2)
-for linha in dataset.iterrows():
-    #print(linha)
-    limiteinf = linha[1][0]
-    fqclasse = linha[1][2]
-    idfreqant = linha[0]
-    if linha[1][5]>=fi2:
-        idfreqant = idfreqant-1
-        break
-print(limiteinf, fqclasse, idfreqant)
 
-# Encontrando frequência acumulada anterior
-fiant = dataset.iloc[[idfreqant]]["Fi"].values[0]
-print(fiant)
+# Criando função
+def quartil(dataframe):
+    for linha in dataset.iterrows():
+        #print(linha)
+        limiteinf = linha[1][0]
+        fqclasse = linha[1][2]
+        idfreqant = linha[0]
+        if linha[1][5]>=fi2:
+            idfreqant = idfreqant-1
+            break
+    print(limiteinf, fqclasse, idfreqant)
 
-# Calculando mediana pela fórmula - o intervalo é 4
-mediana = limiteinf+((fi2-fiant)*4)/fqclasse
-print(mediana)
+    # Encontrando frequência acumulada anterior
+    fiant = dataset.iloc[[idfreqant]]["Fi"].values[0]
+    print(fiant)
+
+    # Calculando mediana pela fórmula - o intervalo é 4
+    mediana = limiteinf+((fi2-fiant)*4)/fqclasse
+    return mediana
+
+print(quartil(dados))
