@@ -17,8 +17,8 @@ maximo = dados.max()
 print(np.unique(dados, return_counts=True))
 
 # Gerando gráfico em barras
-#plt.bar(dados, dados)
-#plt.show()
+plt.bar(dados, dados)
+plt.show()
 
 # Usando fórmula de Sturges
 n = len(dados)

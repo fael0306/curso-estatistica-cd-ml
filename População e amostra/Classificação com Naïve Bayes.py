@@ -89,9 +89,8 @@ print(cm)
 matrizlista = cm.tolist()
 
 # Gráfico da matriz
-#sns.heatmap(cm, annot=True)
-#plt.plot(cm)
-#plt.show()
+sns.heatmap(cm, annot=True)
+plt.show()
 
 # Percentual de acerto para pessoas que pagam o empréstimo: primeiro elemento da primeira linha são os acertos e a primeira linha são os que pagam, então dividimos os acertos pelo total da linha
 print("Percentual de acerto para pessoas que pagam o empréstimo:",round(matrizlista[0][0]/sum(matrizlista[0])*100,2),"%")
