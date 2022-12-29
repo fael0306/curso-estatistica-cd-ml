@@ -11,7 +11,7 @@ py -m pip install -U (nome do pacote)
 py -m pip install --upgrade pip
 
 
-Para gerar gráficos: usar seaborn e matplotlib.pyplot
-Ex: 
-sns.distplot(dataset["price"])
+Para gerar gráficos: usar seaborn e matplotlib.pyplot\n
+Ex:\n
+sns.distplot(dataset["price"])\n
 plt.show()
