@@ -11,6 +11,7 @@ py -m pip install -U (nome do pacote)
 py -m pip install --upgrade pip
 
 
+
 Para gerar gráficos: usar seaborn e matplotlib.pyplot
 
 Ex:
