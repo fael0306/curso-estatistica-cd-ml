@@ -9,3 +9,9 @@ py -m pip install -U (nome do pacote)
 
 - Atualizar o pip:
 py -m pip install --upgrade pip
+
+
+Para gerar gráficos: usar seaborn e matplotlib.pyplot
+Ex: 
+sns.distplot(dataset["price"])
+plt.show()
