@@ -13,3 +13,4 @@ plt.show()
 
 # Verificando mínimos e máximos
 print(min(dadosgama), max(dadosgama))
+
