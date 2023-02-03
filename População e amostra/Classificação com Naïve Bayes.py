@@ -12,9 +12,8 @@ print(dataset.head())
 dataset.dropna(inplace=True)
 print(dataset.shape)
 
-# Plotando
+# Plotando, porém, só plota no Colab
 sns.countplot(dataset['c#default'])
-plt.show()
 
 # Alocando as colunas 0, 1 e 2 em x
 x = dataset.iloc[:, 1:4].values
