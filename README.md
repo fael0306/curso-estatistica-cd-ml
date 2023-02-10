@@ -13,3 +13,5 @@ py -m pip install --upgrade pip
 
 
 Para gerar gráficos: usar seaborn e matplotlib.pyplot
+
+![image](https://user-images.githubusercontent.com/25599308/218214270-ac3e6e24-f052-4150-857e-77a7b211a910.png)
