@@ -4,6 +4,12 @@ https://www.udemy.com/course/estatistica-para-ciencia-de-dados-machine-learning/
 
 Cada seção do curso numa pasta diferente (2-10).
 
+Principais bibliotecas
+- matplotlib
+- pandas
+- numpy
+- seaborn
+
 - Instalar pacotes:
 py -m pip install -U (nome do pacote)
 
