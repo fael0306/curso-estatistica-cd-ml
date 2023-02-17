@@ -12,7 +12,7 @@ lat,long = dataset['lat'].mean(), dataset['long'].mean()
 
 mapa = folium.Map(location=[lat,long])
 #mapa.save("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\Visualização\\mapa.html")
-mapa.show_in_browser()
+#mapa.show_in_browser()
 
 # Ordenando por preço e pegando as 1000 casas mais caras
 dataset = dataset.sort_values(by='price', ascending=False)
@@ -24,7 +24,7 @@ mapa = folium.Map(location=[lat,long])
 # Para salvar podemos usar o save
 #mapa.save("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\Visualização\\mapa.html")
 # Usando este método, podemos visualizar direto no navegador
-mapa.show_in_browser()
+#mapa.show_in_browser()
 
 # Ordenando por preço e pegando as 1000 casas mais baratas
 dataset = dataset.sort_values(by='price', ascending=True)
@@ -32,7 +32,7 @@ datasetbaratos = dataset[0:1000]
 
 lat,long = datasetbaratos['lat'].mean(), datasetbaratos['long'].mean()
 
-mapa = folium.Map(location=[lat,long])
+mapa = folium.Map(location=[lat,long], zoom_start=50)
 # Para salvar podemos usar o save
 #mapa.save("C:\\Users\\f0fp1107\\Desktop\\Estatistica para Ciencia de Dados e Machine Learning\\Visualização\\mapa.html")
 # Usando este método, podemos visualizar direto no navegador
