@@ -12,7 +12,7 @@ Cada seção do curso numa pasta diferente (2-10).
     - sympy
 
 - Instalar pacotes:
-py -m pip install -U (nome do pacote)
+py -m pip install -U (nomes dos pacotes)
 
 - Atualizar o pip:
 py -m pip install --upgrade pip
