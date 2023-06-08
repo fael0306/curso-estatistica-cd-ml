@@ -12,13 +12,13 @@ Cada seção do curso numa pasta diferente (2-10).
     - sympy
     - scipy
 
-- Instalar pacotes:
+- Instalar pacotes
   - Windows:
     - py -m pip install -U (nomes dos pacotes)
   - Linux
     - pip install (nomes dos pacotes)  
 
-- Atualizar o pip:
+- Atualizar o pip
   - Windows:
     - py -m pip install --upgrade pip
   - Linux:
