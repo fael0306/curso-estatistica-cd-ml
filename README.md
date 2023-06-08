@@ -13,7 +13,10 @@ Cada seção do curso numa pasta diferente (2-10).
     - scipy
 
 - Instalar pacotes:
-py -m pip install -U (nomes dos pacotes)
+  - Windows:
+    - py -m pip install -U (nomes dos pacotes)
+  - Linux
+    - pip install (nomes dos pacotes)  
 
 - Atualizar o pip:
 py -m pip install --upgrade pip
