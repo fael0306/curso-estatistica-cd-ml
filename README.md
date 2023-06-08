@@ -19,9 +19,10 @@ Cada seção do curso numa pasta diferente (2-10).
     - pip install (nomes dos pacotes)  
 
 - Atualizar o pip:
-py -m pip install --upgrade pip
-
-
+  - Windows:
+    - py -m pip install --upgrade pip
+  - Linux:
+    - pip install --upgrade pip 
 
 Para gerar gráficos: usar seaborn e matplotlib.pyplot
 
