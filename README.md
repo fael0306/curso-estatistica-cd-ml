@@ -10,6 +10,7 @@ Cada seção do curso numa pasta diferente (2-10).
     - numpy
     - seaborn
     - sympy
+    - scipy
 
 - Instalar pacotes:
 py -m pip install -U (nomes dos pacotes)
